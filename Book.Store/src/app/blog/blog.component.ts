@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-blog',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent {
+
+   id :number =0;
+   authername :string ='deepak'   
+   
+   constructor(private router:ActivatedRoute) { }
+
+  ngOnInit() {
+    this.router.params.subscribe(param => {
+      this.id= param['id'];
+      this.authername=param['authername'];
+    })
+    
+  }
 
 }

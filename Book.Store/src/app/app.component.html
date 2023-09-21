@@ -1,9 +1,26 @@
 
-<h4>Header</h4>
+<div class="container-fluid bg-dark">
+    <header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a routerLink="/contact" class="nav-link active" aria-current="page">Home</a></li>
+        <li class="nav-item"><a routerLink="/auth/login" class="nav-link">Features</a></li>
+        <li class="nav-item"><a routerLink="/auth/login" class="nav-link">Pricing</a></li>
+        <li class="nav-item"><a routerLink="/auth/signup" class="nav-link">FAQs</a></li>
+        <li class="nav-item"><a routerLink="/blog/8" class="nav-link">About</a></li>
+        <li class="nav-item"><a routerLink="/contactform" class="nav-link">Contact Form</a></li>
+      </ul>
+    </header>
+  </div>
+  
 <a routerLink="/blog">Blog</a>
 <a routerLink="/contact">Contact</a>
-<a routerLink="/auth/login">login</a>
+<a routerLink="/auth/login" [queryParams]="{name:'Kumar',email:email}">login</a>
 <a routerLink="/auth/signup">Signup</a>
-<h1>Web app for Book Store</h1>
+
 <router-outlet></router-outlet>
-<h4>Footer</h4>
+
+<footer class="footer mt-auto py-3 bg-body-tertiary">
+    <div class="container">
+      <span class="text-body-secondary">Place sticky footer content here.</span>
+    </div>
+  </footer>
